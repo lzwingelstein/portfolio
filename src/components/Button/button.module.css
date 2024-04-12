@@ -1,0 +1,12 @@
+.button {
+    display: inline-block;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: fit-content;
+}
+
+.button:hover {
+  color: var(--color-accent);
+}
