@@ -5,7 +5,7 @@ import FrontendMentorIcon from '@/assets/images/icon-frontend-mentor.svg';
 
 export default function SocialLinks() {
     return (
-        <div className="flex flex-col md:flex-row justify-between pb-8">
+        <div className="flex flex-col md:flex-row justify-between pt-[20px] md:pt-[29px] l:pt-[40px] pb-8">
             <p className="text-center font-bold">ludoviczwingelstein</p>
             <p className='p-3 md:p-0'></p>
             <div className="flex justify-center space-x-4">
