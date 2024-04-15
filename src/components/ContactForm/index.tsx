@@ -75,7 +75,7 @@ export default function ContactForm() {
   return (
     <>
       <div id="contact" className="grid md:grid-cols-2 gap-x-28">
-        <div>
+        <div className="md:text-start">
           <h1>Contact</h1>
           <p className="pb-5"></p>
           <p>
