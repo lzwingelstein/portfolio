@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import Button from "../Button";
 import Input from "../Input";
 import TextArea from "../TextArea";
+import ButtonCTA from "../ButtonCTA";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -22,9 +22,13 @@ export default function ContactForm() {
     setMessage(event.target.value);
   };
 
+  const sendMessage = () => {
+    console.log("Sending message", name, email, message);
+  };
+
   return (
     <>
-      <div className="grid md:grid-cols-2 gap-x-28">
+      <div id="contact" className="grid md:grid-cols-2 gap-x-28">
         <div>
           <h1>Contact</h1>
           <p className="pb-5"></p>
@@ -34,7 +38,7 @@ export default function ContactForm() {
           </p>
           <p className="pb-12"></p>
         </div>
-        <form className="flex flex-col">
+        <div className="flex flex-col">
           <Input
             type="text"
             placeholder="Name"
@@ -59,9 +63,9 @@ export default function ContactForm() {
           />
           <p className="pb-3"></p>
           <div className="flex justify-end">
-            <Button>Send Message</Button>
+            <ButtonCTA onClick={sendMessage}>Send Message</ButtonCTA>
           </div>
-        </form>
+        </div>
       </div>
       <p className="pb-20"></p>
     </>
