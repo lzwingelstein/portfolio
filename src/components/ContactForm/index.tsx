@@ -3,12 +3,15 @@ import { useEffect, useState } from "react";
 import Input from "../Input";
 import TextArea from "../TextArea";
 import ButtonCTA from "../ButtonCTA";
+import { sendEmail } from "@/lib/sendEmail";
 
-interface Errors {
-  name?: string;
-  email?: string;
-  message?: string;
-}
+export type FormData = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+type Errors = Partial<FormData>;
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -16,6 +19,8 @@ export default function ContactForm() {
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState<Errors>({});
   const [isFormValid, setIsFormValid] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [response, setResponse] = useState<string | null>(null);
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
@@ -30,17 +35,21 @@ export default function ContactForm() {
     setMessage(event.target.value);
   };
 
-  const sendMessage = () => {
+  const sendMessage = async () => {
+    validateForm();
     if (isFormValid) {
-      console.log("Sending Form", name, email, message);
+      const [response, err] = await sendEmail({ name, email, message });
+      if (err) {
+        console.error("Failed to send email:", err);
+        setError("Failed to send email. Please try again later.");
+        return;
+      }
+      console.log("Email sent successfully.");
+      setResponse(response);
     } else {
       console.log("Form has errors. Please correct them.");
     }
   };
-
-  useEffect(() => {
-    validateForm();
-  }, [name, email, message]);
 
   const validateForm = () => {
     let errors: Errors = {};
@@ -76,6 +85,8 @@ export default function ContactForm() {
           <p className="pb-12"></p>
         </div>
         <div className="flex flex-col">
+          <p>{response}</p>
+          <p className="text-red-500">{error}</p>
           <Input
             type="text"
             placeholder="Name"
