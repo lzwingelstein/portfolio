@@ -3,6 +3,7 @@ import SocialLinks from "../src/components/SocialLinks";
 import "./globals.css";
 import SkillsSection from "@/components/SkillsSection";
 import Footer from "@/components/Footer";
+import ProjectSection from "@/components/ProjectSection";
 export default function Home() {
   return (
     <main>
@@ -12,7 +13,9 @@ export default function Home() {
         </div>
         <HeroSection />
         <hr className="w-full text-white" />
-        <SkillsSection></SkillsSection>
+        <SkillsSection />
+        <hr className="md:hidden w-full text-white" />
+        <ProjectSection />
       </div>
       <Footer />
     </main>
