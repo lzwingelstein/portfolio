@@ -2,10 +2,12 @@ import Image from "next/image";
 import GithubIcon from '@/assets/images/icon-github.svg';
 import LinkedinIcon from '@/assets/images/icon-linkedin.svg';
 import FrontendMentorIcon from '@/assets/images/icon-frontend-mentor.svg';
+import { ReactElement } from "react";
 
-export default function SocialLinks() {
+
+const SocialLinks = (): ReactElement => {
     return (
-        <div className="flex flex-col md:flex-row justify-between pt-[20px] md:pt-[29px] l:pt-[40px] pb-8">
+        <div className="flex flex-col md:flex-row justify-between w-full pt-[20px] md:pt-[29px] l:pt-[40px] pb-8 z-50">
             <p className="text-center font-bold">ludoviczwingelstein</p>
             <p className='p-3 md:p-0'></p>
             <div className="flex justify-center space-x-4">
@@ -22,3 +24,5 @@ export default function SocialLinks() {
         </div>
     )
 }
+
+export default SocialLinks;
