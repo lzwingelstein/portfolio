@@ -1,0 +1,12 @@
+.button {
+    display: inline-block;
+    color: theme('colors.primary');
+    border-bottom: 2px solid theme('colors.accent');
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: fit-content;
+}
+
+.button:hover {
+  color: theme('colors.accent');
+}

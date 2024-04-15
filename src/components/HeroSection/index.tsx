@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
-import Button from "../Button";
 import PhotoMobile from "../../assets/images/image-profile-mobile.webp";
 import PhotoTablet from "../../assets/images/image-profile-tablet.webp";
 import PhotoDesktop from "../../assets/images/image-profile-desktop.webp";
 import Rings from "../../assets/images/pattern-rings.svg";
 import Circle from "../../assets/images/pattern-circle.svg";
+import ButtonLink from "../ButtonLink";
 
 export default function HeroSection() {
   return (
@@ -83,7 +83,7 @@ export default function HeroSection() {
             web apps that users love.
           </p>
           <p className="pb-8 md:pb-16"></p>
-          <Button>CONTACT ME</Button>
+          <ButtonLink href="#contact">CONTACT ME</ButtonLink>
           <p className="md:pb-16"></p>
         </div>
       </div>
