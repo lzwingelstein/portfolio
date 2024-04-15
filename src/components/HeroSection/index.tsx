@@ -2,7 +2,7 @@
 import Image from "next/image";
 import PhotoMobile from "../../assets/images/image-profile-mobile.webp";
 import PhotoTablet from "../../assets/images/image-profile-tablet.webp";
-import PhotoDesktop from "../../assets/images/image-profile-desktop.webp";
+import PhotoDesktop from "../../assets/images/photo-profile-desktop.jpeg";
 import Rings from "../../assets/images/pattern-rings.svg";
 import Circle from "../../assets/images/pattern-circle.svg";
 import ButtonLink from "../ButtonLink";
@@ -22,7 +22,7 @@ export default function HeroSection() {
           />
           <Image
             className="z-10"
-            src={PhotoMobile}
+            src={PhotoDesktop}
             alt="Photo de profile"
             width={174}
             height={383}
@@ -39,7 +39,7 @@ export default function HeroSection() {
           />
           <Image
             className=" z-10"
-            src={PhotoTablet}
+            src={PhotoDesktop}
             alt="Photo de profile"
             width={322}
             height={600}
