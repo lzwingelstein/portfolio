@@ -87,7 +87,7 @@ export default function HeroSection() {
           <p className="md:pb-16"></p>
         </div>
       </div>
-      <p className="pb-16"></p>
+      <p className="pb-20"></p>
     </div>
   );
 }

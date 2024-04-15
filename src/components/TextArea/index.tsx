@@ -1,28 +1,25 @@
-import classes from "./input.module.css";
+import classes from "./textarea.module.css";
 
-interface InputTextFieldProps {
+interface TextAreaProps {
   placeholder: string;
   value: string;
-  type: string;
   error?: string;
   className?: string;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
-export default function Input({
+export default function TextArea({
   className,
   placeholder,
   value,
-  type,
   error,
   onChange,
-}: InputTextFieldProps) {
+}: TextAreaProps) {
   return (
     <div className={`${className} flex flex-col`}>
-      <input
-        className={classes.input}
+      <textarea
+        className={classes.textarea}
         placeholder={placeholder}
-        type={type}
         value={value}
         onChange={onChange}
       />
