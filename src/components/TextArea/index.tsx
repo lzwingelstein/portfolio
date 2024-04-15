@@ -18,12 +18,16 @@ export default function TextArea({
   return (
     <div className={`${className} flex flex-col`}>
       <textarea
-        className={classes.textarea}
+        className={
+          !!error
+            ? `${classes.textarea} ${classes.error}`
+            : `${classes.textarea}`
+        }
         placeholder={placeholder}
         value={value}
         onChange={onChange}
       />
-      {error && <span className="text-red-500">{error}</span>}
+      {error && <span className="text-red-500 text-end">{error}</span>}
     </div>
   );
 }

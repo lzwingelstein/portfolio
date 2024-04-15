@@ -20,13 +20,15 @@ export default function Input({
   return (
     <div className={`${className} flex flex-col`}>
       <input
-        className={classes.input}
+        className={
+          !!error ? `${classes.input} ${classes.error}` : `${classes.input}`
+        }
         placeholder={placeholder}
         type={type}
         value={value}
         onChange={onChange}
       />
-      {error && <span className="text-red-500">{error}</span>}
+      {error && <span className="text-red-500 text-end">{error}</span>}
     </div>
   );
 }

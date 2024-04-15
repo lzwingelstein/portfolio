@@ -1,13 +1,21 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Input from "../Input";
 import TextArea from "../TextArea";
 import ButtonCTA from "../ButtonCTA";
+
+interface Errors {
+  name?: string;
+  email?: string;
+  message?: string;
+}
 
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState<Errors>({});
+  const [isFormValid, setIsFormValid] = useState(false);
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
@@ -23,7 +31,36 @@ export default function ContactForm() {
   };
 
   const sendMessage = () => {
-    console.log("Sending message", name, email, message);
+    if (isFormValid) {
+      console.log("Sending Form", name, email, message);
+    } else {
+      console.log("Form has errors. Please correct them.");
+    }
+  };
+
+  useEffect(() => {
+    validateForm();
+  }, [name, email, message]);
+
+  const validateForm = () => {
+    let errors: Errors = {};
+
+    if (!name) {
+      errors.name = "Name is required.";
+    }
+
+    if (!email) {
+      errors.email = "Email is required.";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      errors.email = "Email is invalid.";
+    }
+
+    if (!message) {
+      errors.message = "Message is required.";
+    }
+
+    setErrors(errors);
+    setIsFormValid(Object.keys(errors).length === 0);
   };
 
   return (
@@ -44,6 +81,7 @@ export default function ContactForm() {
             placeholder="Name"
             value={name}
             onChange={handleNameChange}
+            error={errors.name}
             className="w-full py-2"
           />
           <p className="pb-3"></p>
@@ -52,6 +90,7 @@ export default function ContactForm() {
             placeholder="Email"
             value={email}
             onChange={handleEmailChange}
+            error={errors.email}
             className="w-full py-2"
           />
           <p className="pb-3"></p>
@@ -59,6 +98,7 @@ export default function ContactForm() {
             placeholder="Message"
             value={message}
             onChange={handleMessageChange}
+            error={errors.message}
             className="w-full py-2"
           />
           <p className="pb-3"></p>

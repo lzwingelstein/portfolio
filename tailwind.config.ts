@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import colors from "tailwindcss/colors";
 
 const config: Config = {
   content: [
@@ -15,13 +16,17 @@ const config: Config = {
       },
     },
     colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      white: colors.white,
+      red: colors.red,
       dark: {
-        500:'#242424',
-        600:'#151515',
+        500: "#242424",
+        600: "#151515",
       },
-      primary: '#FFFFFF',
-      secondary: '#d9d9d9',
-      accent: '#4EE1A0',
+      primary: "#FFFFFF",
+      secondary: "#d9d9d9",
+      accent: "#4EE1A0",
     },
   },
   plugins: [],
