@@ -82,15 +82,15 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section>
-      <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-28 gap-y-14 pt-10">
+    <section className="pt-16">
+      <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-28 gap-y-14">
         {skills.map((skill: SkillData, index: number) => (
           <li key={index} className="basis-full md:basis-1/2">
             <Skill name={skill.name} description={skill.description} />
           </li>
         ))}
       </ul>
-      <p className="pb-10"></p>
+      <p className="pb-20"></p>
     </section>
   );
 }
