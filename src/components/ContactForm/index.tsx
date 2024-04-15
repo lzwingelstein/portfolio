@@ -74,8 +74,8 @@ export default function ContactForm() {
 
   return (
     <>
-      <div id="contact" className="grid md:grid-cols-2 gap-x-28">
-        <div className="md:text-start">
+      <div id="contact" className="flex flex-col md:flex-row justify-between">
+        <div className="md:text-start md:w-[445px]">
           <h1>Contact</h1>
           <p className="pb-5"></p>
           <p>
@@ -84,7 +84,7 @@ export default function ContactForm() {
           </p>
           <p className="pb-12"></p>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col md:w-[445px]">
           <p>{response}</p>
           <p className="text-red-500">{error}</p>
           <Input
