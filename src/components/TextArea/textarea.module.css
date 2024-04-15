@@ -1,4 +1,4 @@
-.input {
+.textarea {
   display: inline-block;
   color: rgdba(theme("colors.primary"), 0.5);
   background-color: transparent;
@@ -6,13 +6,12 @@
   border-bottom: 1px solid #ffffff;
   padding-bottom: 10px;
   padding-top: 10px;
+  height: 107px;
 }
 
-.input:focus {
+.textarea:focus {
   display: inline-block;
   color: theme("colors.primary");
   border-bottom: 1px solid theme("colors.accent");
   outline-width: 0;
-  padding-bottom: 10px;
-  padding-top: 10px;
 }
