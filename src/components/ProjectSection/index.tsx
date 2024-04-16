@@ -7,11 +7,11 @@ import ButtonLink from "../ButtonLink";
 export default function ProjectSection() {
   return (
     <section className="pt-20">
-      <div className="flex flex-row justify-between w-full items-center">
+      <div className="flex flex-row justify-between w-full items-center pb-4 md:pb-8">
         <h1 className="w-fit">Projects</h1>
         <ButtonLink href="#contact">CONTACT ME</ButtonLink>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <ProjectCard
           title="Project 1"
           stack="HTML CSS JS"
