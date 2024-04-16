@@ -29,6 +29,12 @@ const config: Config = {
       accent: "#4EE1A0",
     },
   },
+  variants: {
+    extend: {
+      visibility: ["group-hover"],
+    },
+  },
+
   plugins: [],
 };
 export default config;

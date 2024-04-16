@@ -1,7 +1,5 @@
 "use client";
 import Image from "next/image";
-import PhotoMobile from "../../assets/images/image-profile-mobile.webp";
-import PhotoTablet from "../../assets/images/image-profile-tablet.webp";
 import PhotoDesktop from "../../assets/images/photo-profile-desktop.jpeg";
 import Rings from "../../assets/images/pattern-rings.svg";
 import Circle from "../../assets/images/pattern-circle.svg";
