@@ -12,7 +12,7 @@ export default function ButtonCTA({
 }: ButtonProps): ReactElement {
   return (
     <button className={classes.button} onClick={onClick}>
-      {children}
+      {children.toUpperCase()}
     </button>
   );
 }

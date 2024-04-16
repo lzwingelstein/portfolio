@@ -13,7 +13,7 @@ export default function ButtonLink({
 }: ButtonProps): ReactElement {
   return (
     <Link className={classes.button} href={href}>
-      {children}
+      {children.toUpperCase()}
     </Link>
   );
 }

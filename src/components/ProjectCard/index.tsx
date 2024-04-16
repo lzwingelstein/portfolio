@@ -21,8 +21,8 @@ export default function ProjectCard({
     <div className="flex flex-col p-4">
       <Image src={image} alt={title} width={540} height={400} />
       <div>
-        <h3 className="text-lg font-bold">{title}</h3>
-        <p className="text-sm text-gray-500">{stack}</p>
+        <h3 className="text-lg font-bold">{title.toUpperCase()}</h3>
+        <p className="text-sm text-gray-500">{stack.toLocaleUpperCase()}</p>
       </div>
       {/* <div className="flex justify-end mt-4">
         <ButtonCTA onClick={() => window.open(link, "_blank")}>
