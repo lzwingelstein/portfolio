@@ -3,7 +3,7 @@ import Image from "next/image";
 import PhotoDesktop from "../../assets/images/photo-profile-desktop.jpeg";
 import Rings from "../../assets/images/pattern-rings.svg";
 import Circle from "../../assets/images/pattern-circle.svg";
-import ButtonLink from "../ButtonLink";
+import ContactLink from "../ContactLink";
 
 type HeroSectionProps = {
   className?: string;
@@ -85,7 +85,7 @@ export default function HeroSection({ className }: HeroSectionProps) {
             web apps that users love.
           </p>
           <p className="pb-16 md:pb-16"></p>
-          <ButtonLink href="#contact">CONTACT ME</ButtonLink>
+          <ContactLink />
           <p className="pb-8 md:pb-16"></p>
         </div>
       </div>
