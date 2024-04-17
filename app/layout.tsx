@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden bg-dark-600 text-secondary">
       <body>{children}</body>
     </html>
   );
