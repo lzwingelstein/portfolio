@@ -74,7 +74,10 @@ export default function ContactForm() {
 
   return (
     <>
-      <div id="contact" className="flex flex-col md:flex-row justify-between">
+      <div
+        id="contact"
+        className="flex flex-col md:flex-row justify-between md:min-h-[50vh]"
+      >
         <div className="md:text-start md:w-[445px]">
           <h1>Contact</h1>
           <p className="pb-5"></p>

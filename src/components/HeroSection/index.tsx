@@ -5,12 +5,16 @@ import Rings from "../../assets/images/pattern-rings.svg";
 import Circle from "../../assets/images/pattern-circle.svg";
 import ButtonLink from "../ButtonLink";
 
-export default function HeroSection() {
+type HeroSectionProps = {
+  className?: string;
+};
+
+export default function HeroSection({ className }: HeroSectionProps) {
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-col items-center justify-center text-center md:flex-row-reverse  md:text-left md:justify-between">
+    <div className={`${className} flex flex-col`}>
+      <div className="flex flex-col items-center justify-center text-center md:flex-row-reverse md:text-left md:justify-between">
         {/* Mobile picture */}
-        <div className="md:hidden flex w-full z-30 relative justify-center ">
+        <div className="md:hidden flex w-full z-30 relative justify-center">
           <Image
             className="absolute bottom-[0px] right-[-73px] z-50"
             src={Circle}
@@ -44,7 +48,7 @@ export default function HeroSection() {
           ></Image>
         </div>
         {/* Desktop Picture */}
-        <div className="max-xl:hidden h-full z-30 relative">
+        <div className="max-xl:hidden z-30 relative">
           <Image
             className="absolute bottom-[80px] left-[-62px] z-50"
             src={Circle}
@@ -60,8 +64,8 @@ export default function HeroSection() {
             height={720}
           ></Image>
         </div>
-        <div className="md:w-3/5 md:pt-16 z-50">
-          <h1 className="md:w-[120%] relative">
+        <div className=" pt-16 md:w-3/5 md:pt-16 z-50 md:h-[100vh] md:content-center">
+          <h1 className="md:w-[120%] relative ">
             <Image
               className="absolute top-[-270px] md:top-[-70px] left-[-230px] z-10"
               src={Rings}
@@ -80,12 +84,11 @@ export default function HeroSection() {
             Based in Paris, I’m a front-end developer passionate about building
             web apps that users love.
           </p>
-          <p className="pb-8 md:pb-16"></p>
+          <p className="pb-16 md:pb-16"></p>
           <ButtonLink href="#contact">CONTACT ME</ButtonLink>
-          <p className="md:pb-16"></p>
+          <p className="pb-8 md:pb-16"></p>
         </div>
       </div>
-      <p className="pb-20"></p>
     </div>
   );
 }
