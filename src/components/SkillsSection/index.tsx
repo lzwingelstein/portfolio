@@ -5,7 +5,11 @@ interface SkillData {
   description?: string;
 }
 
-export default function SkillsSection() {
+type SkillsSectionProps = {
+  className?: string;
+};
+
+export default function SkillsSection({ className }: SkillsSectionProps) {
   const separator = " | ";
   const frontends: string[] = [
     "HTML",
@@ -82,7 +86,7 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section className="pt-16">
+    <section className={`${className} pt-16 snap-always snap-start`}>
       <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-28 gap-y-14">
         {skills.map((skill: SkillData, index: number) => (
           <li key={index} className="basis-full md:basis-1/2">
