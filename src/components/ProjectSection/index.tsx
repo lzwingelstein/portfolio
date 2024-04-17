@@ -2,7 +2,7 @@ import ProjectCard from "../ProjectCard";
 import Project1 from "../../assets/images/thumbnail-project-1-large.webp";
 import Project2 from "../../assets/images/thumbnail-project-2-large.webp";
 import Project3 from "../../assets/images/thumbnail-project-3-large.webp";
-import ButtonLink from "../ButtonLink";
+import ContactLink from "../ContactLink";
 
 type ProjectSectionProps = {
   className?: string;
@@ -13,7 +13,7 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
     <section className={`${className} pt-16`}>
       <div className="flex flex-row justify-between w-full items-center pb-4 md:pb-8">
         <h1 className="w-fit">Projects</h1>
-        <ButtonLink href="#contact">CONTACT ME</ButtonLink>
+        <ContactLink />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <ProjectCard
