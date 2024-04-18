@@ -12,57 +12,68 @@ type HeroSectionProps = {
 export default function HeroSection({ className }: HeroSectionProps) {
   return (
     <div className={`${className} flex flex-col`}>
-      <div className="flex flex-col items-center justify-center text-center md:flex-row-reverse md:text-left md:justify-between">
-        {/* Mobile picture */}
-        <div className="md:hidden flex w-full z-30 relative justify-center">
-          <Image
-            className="absolute bottom-[0px] right-[-73px] z-50"
-            src={Circle}
-            width={129}
-            height={129}
-            alt="Circle"
-          />
-          <Image
-            className="z-10"
-            src={PhotoDesktop}
-            alt="Photo de profile"
-            width={174}
-            height={383}
-          />
-        </div>
-        {/* Tablette picture */}
-        <div className="max-md:hidden xl:hidden z-30 relative right-[-2rem]">
-          <Image
-            className="absolute bottom-[0px] right-[-64px] z-50"
-            src={Circle}
-            width={129}
-            height={129}
-            alt="Circle"
-          />
-          <Image
-            className=" z-10"
-            src={PhotoDesktop}
-            alt="Photo de profile"
-            width={322}
-            height={600}
-          ></Image>
-        </div>
-        {/* Desktop Picture */}
-        <div className="max-xl:hidden z-30 relative">
-          <Image
-            className="absolute bottom-[80px] left-[-62px] z-50"
-            src={Circle}
-            width={129}
-            height={129}
-            alt="Circle"
-          />
-          <Image
-            className="z-10"
-            src={PhotoDesktop}
-            alt="Photo de profile"
-            width={445}
-            height={720}
-          ></Image>
+      <div className="flex flex-col items-center justify-between text-center md:flex-row-reverse md:text-left">
+        <div className="flex justify-start md:h-[100vh]">
+          <div className="flex items-end h-fit md:h-[80vh] xl:h-[90vh] bg-dark-500 relative md:right-[-2rem] xl:right-[0rem]">
+            {/* Mobile picture */}
+            <div className="md:hidden flex w-full z-30 relative">
+              <Image
+                className="absolute bottom-[0px] right-[-45vw] z-50"
+                src={Circle}
+                width={129}
+                height={129}
+                alt="Circle"
+              />
+              <Image
+                className="absolute bottom-[0px] right-[-12px] z-50"
+                src={Circle}
+                width={24}
+                height={24}
+                alt="Circle"
+              />
+              <Image
+                className="z-10"
+                src={PhotoDesktop}
+                alt="Photo de profile"
+                width={174}
+                height={383}
+              />
+            </div>
+            {/* Tablette picture */}
+            <div className="max-md:hidden xl:hidden z-30 relative">
+              <Image
+                className="absolute bottom-[0px] right-[-64px] z-50"
+                src={Circle}
+                width={129}
+                height={129}
+                alt="Circle"
+              />
+              <Image
+                className=" z-10"
+                src={PhotoDesktop}
+                alt="Photo de profile"
+                width={322}
+                height={600}
+              ></Image>
+            </div>
+            {/* Desktop Picture */}
+            <div className="max-xl:hidden z-30 relative h-fit">
+              <Image
+                className="absolute bottom-[80px] left-[-62px] z-50"
+                src={Circle}
+                width={129}
+                height={129}
+                alt="Circle"
+              />
+              <Image
+                className="z-10"
+                src={PhotoDesktop}
+                alt="Photo de profile"
+                width={445}
+                height={720}
+              ></Image>
+            </div>
+          </div>
         </div>
         <div className=" pt-16 md:w-3/5 md:pt-16 z-50 md:h-[100vh] md:content-center">
           <h1 className="md:w-[120%] relative ">
