@@ -89,9 +89,9 @@ export default function SkillsSection({ className }: SkillsSectionProps) {
     <section
       className={`${className} pt-10 md:pt-10 xl:pt-40 pb-10 md:flex md:align-middle`}
     >
-      <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-28 gap-y-14 xl:gap-y-40">
+      <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-4 xl:gap-y-10">
         {skills.map((skill: SkillData, index: number) => (
-          <li key={index} className="basis-full md:basis-1/2">
+          <li key={index} className="basis-full md:basis-1/2 p-10">
             <Skill name={skill.name} description={skill.description} />
           </li>
         ))}
