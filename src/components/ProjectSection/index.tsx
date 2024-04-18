@@ -10,7 +10,7 @@ type ProjectSectionProps = {
 
 export default function ProjectSection({ className }: ProjectSectionProps) {
   return (
-    <section className={`${className} pt-16 pb-20`}>
+    <section className={`${className} pt-16 xl:pt-40 pb-20`}>
       <div className="flex flex-row justify-between w-full items-center pb-4 md:pb-8">
         <h1 className="w-fit">Projects</h1>
         <ContactLink />
