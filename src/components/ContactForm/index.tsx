@@ -76,7 +76,7 @@ export default function ContactForm({ className }: { className?: string }) {
     <>
       <div
         id="contact"
-        className={`${className} flex flex-col xl:flex-row items-center justify-between md:min-h-[50vh]`}
+        className={`${className} flex flex-col xl:flex-row items-center justify-center xl:justify-between md:min-h-[50vh]`}
       >
         <div className="md:text-start md:w-[445px]">
           <h1>Contact</h1>
