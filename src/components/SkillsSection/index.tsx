@@ -10,7 +10,7 @@ type SkillsSectionProps = {
 };
 
 export default function SkillsSection({ className }: SkillsSectionProps) {
-  const separator = " | ";
+  const separator = " • ";
   const frontends: string[] = [
     "HTML",
     "CSS",
@@ -87,9 +87,9 @@ export default function SkillsSection({ className }: SkillsSectionProps) {
 
   return (
     <section
-      className={`${className} pt-16 md:pt-16 pb-20 md:flex md:align-middle`}
+      className={`${className} pt-16 md:pt-40 pb-20 md:flex md:align-middle`}
     >
-      <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-28 gap-y-14 xl:gap-y-40 items-center">
+      <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-28 gap-y-14 xl:gap-y-40">
         {skills.map((skill: SkillData, index: number) => (
           <li key={index} className="basis-full md:basis-1/2">
             <Skill name={skill.name} description={skill.description} />
