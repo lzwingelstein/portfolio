@@ -10,12 +10,12 @@ type ProjectSectionProps = {
 
 export default function ProjectSection({ className }: ProjectSectionProps) {
   return (
-    <section className={`${className} pt-16`}>
+    <section className={`${className} pt-16 pb-20`}>
       <div className="flex flex-row justify-between w-full items-center pb-4 md:pb-8">
         <h1 className="w-fit">Projects</h1>
         <ContactLink />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
         <ProjectCard
           title="Project 1"
           stack="HTML CSS JS"
@@ -38,7 +38,6 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
           code="https://github.com"
         />
       </div>
-      <p className="pb-20"></p>
     </section>
   );
 }
