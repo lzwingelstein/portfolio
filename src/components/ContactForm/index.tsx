@@ -13,7 +13,7 @@ export type FormData = {
 
 type Errors = Partial<FormData>;
 
-export default function ContactForm() {
+export default function ContactForm({ className }: { className?: string }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -76,7 +76,7 @@ export default function ContactForm() {
     <>
       <div
         id="contact"
-        className="flex flex-col md:flex-row justify-between md:min-h-[50vh]"
+        className={`${className} flex flex-col xl:flex-row items-center justify-between md:min-h-[50vh]`}
       >
         <div className="md:text-start md:w-[445px]">
           <h1>Contact</h1>
@@ -87,7 +87,7 @@ export default function ContactForm() {
           </p>
           <p className="pb-12"></p>
         </div>
-        <div className="flex flex-col md:w-[445px]">
+        <div className="flex flex-col w-full md:w-[445px]">
           <p>{response}</p>
           <p className="text-red-500">{error}</p>
           <Input
@@ -121,7 +121,6 @@ export default function ContactForm() {
           </div>
         </div>
       </div>
-      <p className="pb-20"></p>
     </>
   );
 }

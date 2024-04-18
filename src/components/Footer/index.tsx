@@ -8,13 +8,12 @@ type FooterProps = {
 export default function Footer({ className }: FooterProps) {
   return (
     <footer
-      className={`${className} bg-dark-500 pt-16 px-4 md:px-8 xl:px-32 text-center flex flex-col`}
+      className={`${className} bg-dark-500 pt-16 px-4 md:px-8 xl:px-32 flex flex-col`}
     >
-      <ContactForm />
-      <div className="space"></div>
-      <hr className="w-full text-white" />
-      <div className="flex items-stretch h-full">
-        <SocialLinks className="self-end" />
+      <ContactForm className="grow pb-20" />
+      <div className="flex-none">
+        <hr className="w-full text-white" />
+        <SocialLinks />
       </div>
     </footer>
   );
