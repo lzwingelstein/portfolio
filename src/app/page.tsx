@@ -1,5 +1,5 @@
 import HeroSection from "@/components/HeroSection";
-import SocialLinks from "../src/components/SocialLinks";
+import SocialLinks from "../components/SocialLinks";
 import "./globals.css";
 import SkillsSection from "@/components/SkillsSection";
 import Footer from "@/components/Footer";
