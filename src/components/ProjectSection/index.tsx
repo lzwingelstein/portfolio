@@ -1,5 +1,5 @@
 import ProjectCard from "../ProjectCard";
-import Project1 from "../../assets/images/project-portfolio.png";
+import Project1 from "../../assets/images/preview-portfolio.webp";
 import Project2 from "../../assets/images/project-pay4fun.jpg";
 import ContactLink from "../ContactLink";
 
