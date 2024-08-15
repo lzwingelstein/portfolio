@@ -28,7 +28,7 @@ export default function ProjectCard({
           className="ease-in-out duration-500 group-hover:rotate-6 group-hover:scale-125"
         />
         <div
-          className="bg-[#00000090] absolute invisible group-hover:visible flex flex-col space-y-4 items-center justify-center"
+          className="bg-[#00000090] hidden lg:flex absolute invisible group-hover:visible flex flex-col space-y-4 items-center justify-center"
           style={{ inset: 0 }}
         >
           <ButtonCTA onClick={() => window.open(link, "_blank")}>
