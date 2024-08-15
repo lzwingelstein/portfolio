@@ -1,7 +1,6 @@
 import ProjectCard from "../ProjectCard";
-import Project1 from "../../assets/images/thumbnail-project-1-large.webp";
-import Project2 from "../../assets/images/thumbnail-project-2-large.webp";
-import Project3 from "../../assets/images/thumbnail-project-3-large.webp";
+import Project1 from "../../assets/images/project-portfolio.png";
+import Project2 from "../../assets/images/project-pay4fun.jpg";
 import ContactLink from "../ContactLink";
 
 type ProjectSectionProps = {
@@ -17,25 +16,18 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
         <ProjectCard
-          title="Project 1"
-          stack="HTML CSS JS"
+          title="Portfolio"
+          stack="React NextJS"
           image={Project1}
-          link="https://github.com"
-          code="https://github.com"
+          link="https://ludev.fr"
+          code="https://github.com/lzwingelstein/portfolio"
         />
         <ProjectCard
-          title="Project 2"
-          stack="HTML CSS JS"
+          title="Play4Fun"
+          stack="React NextJS"
           image={Project2}
-          link="https://github.com"
-          code="https://github.com"
-        />
-        <ProjectCard
-          title="Project 3"
-          stack="HTML CSS JS"
-          image={Project3}
-          link="https://github.com"
-          code="https://github.com"
+          link="https://play4fun.ludev.fr"
+          code="https://github.com/lzwingelstein/four-fun"
         />
       </div>
     </section>
