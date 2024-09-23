@@ -106,8 +106,12 @@ export default function HeroSection({ className }: HeroSectionProps) {
           </h1>
           <p className="pb-8 "></p>
           <p>
-            Based in Paris, I’m a front-end developer passionate about building
-            web apps that users love.
+            Based in Paris, I&apos;m a backend developer passionate about
+            building software. I used to work with Golang, Nodejs and PostgreSQL
+            on the backend side to create APIs and microservices. I also have
+            experience with Docker, Kubernetes, and CI/CD pipelines. When
+            I&apos;m coding I try to follow the best practices by tests and
+            keeping the code simple and clean.
           </p>
           <p className="pb-10 md:pb-16"></p>
           <ContactLink />
