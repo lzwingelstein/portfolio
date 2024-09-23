@@ -11,16 +11,7 @@ type SkillsSectionProps = {
 
 export default function SkillsSection({ className }: SkillsSectionProps) {
   const separator = " • ";
-  const frontends: string[] = [
-    "HTML",
-    "CSS",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "TailwindCSS",
-    "Vue.js",
-    "Cypress",
-  ];
+  const frontends: string[] = ["Vue.js", "React", "TypeScript"];
 
   const backends: string[] = [
     "Go",
@@ -33,21 +24,20 @@ export default function SkillsSection({ className }: SkillsSectionProps) {
   const devops: string[] = [
     "Docker",
     "Kubernetes",
-    "AWS",
     "Jenkins",
     "GitlabCI",
     "Datadog",
   ];
 
-  const domains: string[] = ["Marketplace", "Logistics", "Payment", "SEO"];
+  const domains: string[] = ["Marketplace", "Logistics", "Payment"];
 
   const practices: string[] = [
     "Micro-services",
     "Hexagonal Architecture",
-    "MVC",
+    "Database Indexing",
     "Unit Test",
     "TDD",
-    "DDD",
+    "Keep it Simple",
     "Scrum",
   ];
 
@@ -56,16 +46,17 @@ export default function SkillsSection({ className }: SkillsSectionProps) {
     "Teamwork",
     "Communication",
     "Problem-solving",
+    "Pair Programming",
   ];
 
   const skills: SkillData[] = [
     {
-      name: "Frontend",
-      description: frontends.join(separator),
-    },
-    {
       name: "Backend",
       description: backends.join(separator),
+    },
+    {
+      name: "Frontend",
+      description: frontends.join(separator),
     },
     {
       name: "Practices",
